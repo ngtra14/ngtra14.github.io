@@ -17,7 +17,7 @@
 				</a>
 				<nav aria-label="Primary navigation">
 					<a href="index.html">Home</a>
-					<a href="#approach" aria-current="page">Professional</a>
+					<a href="#case-studies" aria-current="page">Professional</a>
 					<a href="personal_projects.html">Projects</a>
 					<a href="#contact">Contact</a>
 				</nav>
@@ -31,194 +31,97 @@
 						<p class="section-kicker">Applied AI &amp; Revenue Operations</p>
 						<h1 id="practice-title">Building AI that revenue teams can <span>actually use.</span></h1>
 						<p>
-							My focus is the distance between a promising prototype and a dependable operating
-							workflow: grounding answers in trusted context, designing for the people making the
-							decision, and creating a clear way to evaluate quality.
+							I build AI workflow systems for real operating decisions—grounded in trusted
+							context, designed around the people doing the work, and evaluated against a clear
+							quality standard.
 						</p>
-						<a class="text-link" href="#approach">See my approach <span aria-hidden="true">↓</span></a>
+						<a class="text-link" href="#case-studies">View the case study <span aria-hidden="true">↓</span></a>
 					</div>
 
-					<aside class="answer-system" aria-label="Elements of a production-ready AI answer">
-						<p class="answer-system-title">Production-ready answer</p>
-						<ol>
-							<li>
-								<span>01</span>
-								<div>
-									<strong>Business context</strong>
-									<small>Decision, user, and constraints</small>
-								</div>
-							</li>
-							<li>
-								<span>02</span>
-								<div>
-									<strong>Trusted sources</strong>
-									<small>Relevant and traceable inputs</small>
-								</div>
-							</li>
-							<li>
-								<span>03</span>
-								<div>
-									<strong>Quality controls</strong>
-									<small>Evaluation, review, and fallbacks</small>
-								</div>
-							</li>
-							<li>
-								<span>04</span>
-								<div>
-									<strong>Workflow fit</strong>
-									<small>Useful at the moment of action</small>
-								</div>
-							</li>
-						</ol>
+					<aside class="answer-system" aria-label="How Trang uses AI in professional work">
+						<p class="answer-system-title">My operating principle</p>
+						<p class="operating-principle">
+							<strong>AI accelerates the build.</strong>
+							<span>Domain expertise defines the rules.</span>
+							<span>Validation earns trust.</span>
+						</p>
 					</aside>
-				</div>
-			</section>
-
-			<section id="approach" class="practice-section" aria-labelledby="approach-title">
-				<div class="section-heading">
-					<p class="section-kicker">From prototype to practice</p>
-					<h2 id="approach-title">What I mean by production-ready</h2>
-					<p>
-						A strong AI experience is not only a model or prompt. It is a complete decision
-						system with reliable inputs, explicit expectations, and a path for improvement.
-					</p>
-				</div>
-
-				<div class="practice-grid">
-					<article class="practice-card">
-						<p class="practice-number">01</p>
-						<h3>Start with the decision</h3>
-						<p>Define who needs the answer, what action follows, and where uncertainty or delay creates friction.</p>
-					</article>
-					<article class="practice-card">
-						<p class="practice-number">02</p>
-						<h3>Ground the system</h3>
-						<p>Use the right CRM, warehouse, and knowledge sources while keeping provenance and freshness visible.</p>
-					</article>
-					<article class="practice-card">
-						<p class="practice-number">03</p>
-						<h3>Design the quality bar</h3>
-						<p>Translate “good” into testable criteria, representative examples, edge cases, and review paths.</p>
-					</article>
-					<article class="practice-card">
-						<p class="practice-number">04</p>
-						<h3>Fit the operating rhythm</h3>
-						<p>Deliver the answer where work happens, preserve human judgment, and learn from real usage.</p>
-					</article>
 				</div>
 			</section>
 
 			<section id="case-studies" class="case-study-space" aria-labelledby="case-study-title">
 				<article class="work-case-study">
 					<header class="case-study-header">
-						<div class="case-study-intro">
-							<p class="section-kicker">Case study 01 · Sales &amp; Revenue Operations</p>
-							<h2 id="case-study-title">Revenue and compensation scenario modeling after a workforce restructuring</h2>
-							<p>
-								After a workforce reduction, the team had less capacity while payroll, commission,
-								and revenue-reporting deadlines remained unchanged. Leadership also needed to reset
-								sales coverage and assign next-quarter quotas in less than two weeks.
-							</p>
-							<p class="case-study-role"><strong>My role</strong><span>I designed the analysis approach, translated compensation logic into the model, used AI to accelerate development, validated the outputs, and built the leadership decision experience.</span></p>
-						</div>
-
-						<ul class="impact-summary" aria-label="Case-study summary">
-							<li><strong>3 days</strong><span>Analysis and interactive tool delivered</span></li>
-							<li><strong>&lt; 2 weeks</strong><span>Time remaining before quota decisions</span></li>
-							<li><strong>3 inputs</strong><span>Workday HR data, Salesforce CRM, and compensation logic</span></li>
-						</ul>
+						<p class="section-kicker">Case study 01 · Ad-hoc decision support</p>
+						<h2 id="case-study-title">Modeling a workforce restructuring before quota decisions</h2>
+						<p>
+							After a workforce reduction, the team had less capacity but the same payroll,
+							commission, and revenue-reporting deadlines. Leadership had less than two weeks to
+							reset sales coverage and quotas, but first needed to understand the effects on
+							revenue attribution and variable compensation. The required context was split across
+							Workday HR data, Salesforce, and compensation rules; the incentive platform was not
+							designed for this unusual one-time scenario.
+						</p>
 					</header>
 
-					<section class="architecture-panel" aria-labelledby="architecture-title">
-						<div class="architecture-heading">
-							<p class="section-kicker">System architecture</p>
-							<h3 id="architecture-title">A temporary decision system—not a rushed compensation-platform rebuild</h3>
-							<p>
-								The existing incentive platform was designed for established plans. Configuring and
-								testing one-time restructuring logic there would have taken weeks, so I built an
-								isolated scenario layer for analysis and decision support.
-							</p>
-						</div>
-
-						<div class="architecture-flow" aria-label="Data and decision flow">
-							<div class="architecture-stage architecture-sources">
-								<p>Source context</p>
-								<ul>
-									<li>Workday HR hierarchy &amp; employment records</li>
-									<li>Salesforce ownership &amp; revenue</li>
-									<li>Commission rule library</li>
-								</ul>
-							</div>
-
-							<span class="architecture-arrow" aria-hidden="true">→</span>
-
-							<div class="architecture-stage architecture-core">
-								<p>Scenario model</p>
-								<ul>
-									<li>Align identities and reporting lines</li>
-									<li>Build baseline and proposed states</li>
-									<li>Apply attribution, quota &amp; payout logic</li>
-									<li>Use RAG + Claude to accelerate development</li>
-								</ul>
-							</div>
-
-							<span class="architecture-arrow" aria-hidden="true">→</span>
-
-							<div class="architecture-stage architecture-output">
-								<p>Decision experience</p>
-								<ul>
-									<li>Director and manager drill-down</li>
-									<li>Before-and-after attribution</li>
-									<li>Quota and payout comparisons</li>
-									<li>Visible tradeoffs for leadership</li>
-								</ul>
-							</div>
-						</div>
-
-						<div class="quality-gate">
-							<strong>Quality gate</strong>
-							<span>Source reconciliation</span>
-							<span>Rule-level review</span>
-							<span>Exception resolution with business partners</span>
-						</div>
-					</section>
-
-					<div class="decision-grid">
-						<section class="decision-card" aria-labelledby="technical-decisions-title">
-							<p class="decision-label">01 · Technical decisions</p>
-							<h3 id="technical-decisions-title">Optimize for speed without making AI the source of truth</h3>
-							<ul>
-								<li><strong>Model outside the compensation platform.</strong> The scenario was urgent and temporary; production configuration and regression testing would not fit the deadline.</li>
-								<li><strong>Create one analysis layer across fragmented systems.</strong> A reconstructed hierarchy connected workforce changes to Salesforce ownership, revenue, quotas, and payouts.</li>
-								<li><strong>Separate AI assistance from calculation authority.</strong> RAG supplied relevant commission rules to Claude, while source records, explicit business logic, and reconciliation determined the final numbers.</li>
-								<li><strong>Build for exploration.</strong> An interactive experience replaced a complex worksheet and made scenario differences easier to inspect.</li>
-							</ul>
+					<div class="case-study-parts">
+						<section class="case-study-part" aria-labelledby="technical-decisions-title">
+							<p class="part-label">01 · Technical decision</p>
+							<h3 id="technical-decisions-title">Choose a fast, grounded analysis architecture</h3>
+							<dl>
+								<div>
+									<dt>Scenario layer</dt>
+									<dd>I modeled the one-time change outside the compensation platform because configuring and regression-testing production plans would have taken weeks.</dd>
+								</div>
+								<div>
+									<dt>Why RAG</dt>
+									<dd>The commission logic already existed in the codebase. Retrieval brought the relevant rules into Claude’s working context without fine-tuning or relying on model memory, while keeping the source logic inspectable.</dd>
+								</div>
+								<div>
+									<dt>AI harness</dt>
+									<dd>I chose Claude as the development harness because the work required tracing existing code and reasoning across a large retrieved rule context. Workday, Salesforce, explicit compensation logic, and reconciliation—not the model—remained the calculation authority.</dd>
+								</div>
+							</dl>
 						</section>
 
-						<section class="decision-card" aria-labelledby="domain-decisions-title">
-							<p class="decision-label">02 · Domain expert decisions</p>
-							<h3 id="domain-decisions-title">Translate organizational changes into defensible revenue and compensation logic</h3>
-							<ul>
-								<li><strong>Identify which reporting relationships changed credit.</strong> Not every hierarchy change should alter revenue attribution or compensation.</li>
-								<li><strong>Apply the right rule at the right level.</strong> Seller credit and management compensation required different treatment.</li>
-								<li><strong>Make assumptions explicit.</strong> Uncertain cases were reviewed against source data and resolved with the relevant partners.</li>
-								<li><strong>Design around the leadership decision.</strong> Director and manager drill-downs matched the level at which coverage and quota tradeoffs were being evaluated.</li>
-							</ul>
+						<section class="case-study-part" aria-labelledby="domain-decisions-title">
+							<p class="part-label">02 · Domain expert decision</p>
+							<h3 id="domain-decisions-title">Translate a new organization into defensible business logic</h3>
+							<dl>
+								<div>
+									<dt>Revenue credit</dt>
+									<dd>I determined which reporting-line changes should alter attribution; not every hierarchy change affected credit.</dd>
+								</div>
+								<div>
+									<dt>Compensation</dt>
+									<dd>I separated seller-level rules from management compensation scenarios and applied the appropriate logic to each.</dd>
+								</div>
+								<div>
+									<dt>Exceptions</dt>
+									<dd>I reviewed assumptions against source data and compensation rules, then resolved uncertain cases with the relevant partners.</dd>
+								</div>
+							</dl>
+						</section>
+
+						<section class="case-study-part case-study-part-impact" aria-labelledby="case-impact-title">
+							<p class="part-label">03 · Impact &amp; delivery</p>
+							<h3 id="case-impact-title">A decision-ready experience in three days</h3>
+							<dl>
+								<div>
+									<dt>Delivery</dt>
+									<dd>The analysis and interactive tool were delivered in three days, with less than two weeks before quota decisions.</dd>
+								</div>
+								<div>
+									<dt>Format</dt>
+									<dd>Leaders could drill down by director and manager and compare team structure, revenue attribution, quota, and payout before and after the change.</dd>
+								</div>
+								<div>
+									<dt>Decision value</dt>
+									<dd>The interactive experience replaced an opaque worksheet and made tradeoffs visible before coverage and quota assignments were locked.</dd>
+								</div>
+							</dl>
 						</section>
 					</div>
-
-					<section class="case-impact" aria-labelledby="case-impact-title">
-						<div>
-							<p class="section-kicker">Impact</p>
-							<h3 id="case-impact-title">A decision-ready answer in three days</h3>
-						</div>
-						<ul>
-							<li>Delivered the analysis and a usable interactive experience before next-quarter quota planning.</li>
-							<li>Gave leaders a way to compare team structures, revenue attribution, quotas, and payouts before decisions were locked.</li>
-							<li>Avoided waiting weeks to configure and test unusual one-time logic in the incentive compensation platform.</li>
-							<li>Combined AI development speed with human ownership of rules, assumptions, validation, and final decisions.</li>
-						</ul>
-					</section>
 				</article>
 			</section>
 
