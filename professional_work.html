@@ -35,7 +35,7 @@
 							context, designed around the people doing the work, and evaluated against a clear
 							quality standard.
 						</p>
-						<a class="text-link" href="#case-studies">View professional projects <span aria-hidden="true">↓</span></a>
+						<a class="text-link" href="#case-studies">View professional case studies <span aria-hidden="true">↓</span></a>
 					</div>
 
 					<aside class="answer-system" aria-label="How Trang uses AI in professional work">
@@ -49,35 +49,80 @@
 				</div>
 			</section>
 
-			<section id="case-studies" class="project-index" aria-label="Professional projects">
-				<div class="project-index-shell">
-					<div class="project-index-list">
-						<article class="professional-project-card">
-							<div class="professional-project-copy">
-								<p class="section-kicker">Project 01 · Ad-hoc decision support</p>
-								<h2 id="project-01-title">Modeling a workforce restructuring before quota decisions</h2>
-								<p>
-									Leadership had less than two weeks to understand how new reporting lines would
-									change revenue credit, quotas, and variable compensation. I combined Workday HR
-									data, Salesforce, compensation rules, RAG, and Claude into a decision-ready
-									scenario model and interactive leadership experience.
-								</p>
-								<ul class="tag-list" aria-label="Project methods">
-									<li>Revenue Operations</li>
-									<li>RAG</li>
-									<li>Scenario Modeling</li>
-								</ul>
-								<a class="text-link" href="case_studies/workforce_restructuring.html">Read case study <span aria-hidden="true">→</span></a>
-							</div>
+			<section id="case-studies" class="case-study-space" aria-label="Professional case studies">
+				<article id="workforce-restructuring" class="work-case-study" aria-labelledby="project-01-title">
+					<header class="case-study-header">
+						<p class="section-kicker">Project 01 · Ad-hoc decision support</p>
+						<h2 id="project-01-title">Modeling a workforce restructuring before quota decisions</h2>
+						<p>
+							After a workforce reduction, the team had less capacity but the same payroll,
+							commission, and revenue-reporting deadlines. Leadership had less than two weeks to
+							reset sales coverage and quotas, but first needed to understand the effects on
+							revenue attribution and variable compensation. The required context was split across
+							Workday HR data, Salesforce, and compensation rules; the incentive platform was not
+							designed for this unusual one-time scenario.
+						</p>
+					</header>
 
-							<dl class="professional-project-facts">
-								<div><dt>Delivery</dt><dd>3 days</dd></div>
-								<div><dt>Decision window</dt><dd>Less than 2 weeks</dd></div>
-								<div><dt>Delivery format</dt><dd>Interactive scenario tool</dd></div>
+					<div class="case-study-parts">
+						<section class="case-study-part" aria-labelledby="technical-decisions-title">
+							<p class="part-label">01 · Technical decision</p>
+							<h3 id="technical-decisions-title">Choose a fast, grounded analysis architecture</h3>
+							<dl>
+								<div>
+									<dt>Scenario layer</dt>
+									<dd>I modeled the one-time change outside the compensation platform because configuring and regression-testing production plans would have taken weeks.</dd>
+								</div>
+								<div>
+									<dt>Why RAG</dt>
+									<dd>The commission logic already existed in the codebase. Retrieval brought the relevant rules into Claude’s working context without fine-tuning or relying on model memory, while keeping the source logic inspectable.</dd>
+								</div>
+								<div>
+									<dt>AI harness</dt>
+									<dd>I chose Claude as the development harness because the work required tracing existing code and reasoning across a large retrieved rule context. Workday, Salesforce, explicit compensation logic, and reconciliation—not the model—remained the calculation authority.</dd>
+								</div>
 							</dl>
-						</article>
+						</section>
+
+						<section class="case-study-part" aria-labelledby="domain-decisions-title">
+							<p class="part-label">02 · Domain expert decision</p>
+							<h3 id="domain-decisions-title">Translate a new organization into defensible business logic</h3>
+							<dl>
+								<div>
+									<dt>Revenue credit</dt>
+									<dd>I determined which reporting-line changes should alter attribution; not every hierarchy change affected credit.</dd>
+								</div>
+								<div>
+									<dt>Compensation</dt>
+									<dd>I separated seller-level rules from management compensation scenarios and applied the appropriate logic to each.</dd>
+								</div>
+								<div>
+									<dt>Exceptions</dt>
+									<dd>I reviewed assumptions against source data and compensation rules, then resolved uncertain cases with the relevant partners.</dd>
+								</div>
+							</dl>
+						</section>
+
+						<section class="case-study-part case-study-part-impact" aria-labelledby="case-impact-title">
+							<p class="part-label">03 · Impact &amp; delivery</p>
+							<h3 id="case-impact-title">A decision-ready experience in three days</h3>
+							<dl>
+								<div>
+									<dt>Delivery</dt>
+									<dd>The analysis and interactive tool were delivered in three days, with less than two weeks before quota decisions.</dd>
+								</div>
+								<div>
+									<dt>Format</dt>
+									<dd>Leaders could drill down by director and manager and compare team structure, revenue attribution, quota, and payout before and after the change.</dd>
+								</div>
+								<div>
+									<dt>Decision value</dt>
+									<dd>The interactive experience replaced an opaque worksheet and made tradeoffs visible before coverage and quota assignments were locked.</dd>
+								</div>
+							</dl>
+						</section>
 					</div>
-				</div>
+				</article>
 			</section>
 
 			<section id="contact" class="contact-panel" aria-labelledby="contact-title">
