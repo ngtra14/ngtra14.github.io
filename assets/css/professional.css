@@ -60,39 +60,46 @@ nav a[aria-current="page"]::after {
 	letter-spacing: 0.025em;
 }
 
+.system-map-note {
+	margin: 0 0 22px;
+	color: var(--muted);
+	font-size: 0.9rem;
+	line-height: 1.55;
+}
+
+.system-map-note strong {
+	color: var(--navy);
+}
+
 .operating-principle {
-	position: relative;
 	display: grid;
 	gap: 0;
 	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
-.operating-principle::before {
-	position: absolute;
-	top: 18px;
-	bottom: 18px;
-	left: 5px;
-	width: 1px;
-	background: var(--line);
-	content: "";
-}
-
-.operating-principle strong,
-.operating-principle span {
+.operating-principle li {
 	position: relative;
-	padding: 15px 0 15px 30px;
-	color: var(--navy);
-	font-size: clamp(1rem, 1.35vw, 1.12rem);
-	line-height: 1.35;
+	display: grid;
+	gap: 4px;
+	padding: 13px 0 13px 28px;
+	border-top: 1px solid var(--line);
+	color: var(--muted);
+	font-size: 0.88rem;
+	line-height: 1.4;
 }
 
-.operating-principle strong::before,
-.operating-principle span::before {
+.operating-principle li:last-child {
+	border-bottom: 1px solid var(--line);
+}
+
+.operating-principle li::before {
 	position: absolute;
-	top: 21px;
+	top: 19px;
 	left: 0;
-	width: 11px;
-	height: 11px;
+	width: 10px;
+	height: 10px;
 	border: 3px solid var(--white);
 	border-radius: 50%;
 	background: var(--blue);
@@ -100,8 +107,26 @@ nav a[aria-current="page"]::after {
 	content: "";
 }
 
+.operating-principle li:not(:last-child)::after {
+	position: absolute;
+	top: 31px;
+	bottom: -13px;
+	left: 5px;
+	width: 1px;
+	background: var(--line);
+	content: "";
+}
+
 .operating-principle strong {
-	color: var(--blue);
+	color: var(--navy);
+	font-size: 0.93rem;
+	font-weight: 700;
+}
+
+.operating-principle span {
+	color: var(--muted);
+	font-size: 0.84rem;
+	line-height: 1.45;
 }
 
 .case-study-space {
