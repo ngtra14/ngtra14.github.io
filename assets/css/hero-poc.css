@@ -9,17 +9,17 @@
 
 .poc-hero-shell {
 	display: grid;
-	grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+	grid-template-columns: minmax(0, 1.35fr) minmax(240px, 0.65fr);
 	align-items: center;
-	gap: clamp(40px, 6vw, 72px);
+	gap: clamp(36px, 5vw, 60px);
 	width: min(1180px, calc(100% - 40px));
-	min-height: 600px;
+	min-height: 560px;
 	margin: 0 auto;
-	padding: 72px 0 80px;
+	padding: 64px 0 70px;
 }
 
 .poc-hero-copy {
-	max-width: 730px;
+	max-width: 720px;
 }
 
 .poc-eyebrow {
@@ -35,10 +35,10 @@
 	max-width: 720px;
 	margin: 0;
 	color: var(--navy);
-	font-size: clamp(3rem, 5vw, 4.6rem);
+	font-size: clamp(2.75rem, 4.2vw, 3.9rem);
 	font-weight: 780;
-	letter-spacing: -0.055em;
-	line-height: 1;
+	letter-spacing: -0.045em;
+	line-height: 1.03;
 }
 
 .poc-hero h1 span {
@@ -48,7 +48,7 @@
 
 .poc-introduction {
 	max-width: 660px;
-	margin-top: 28px;
+	margin-top: 24px;
 }
 
 .poc-introduction p {
@@ -64,7 +64,7 @@
 
 .poc-profile {
 	justify-self: end;
-	width: min(100%, 320px);
+	width: min(100%, 280px);
 	margin: 0;
 }
 
@@ -97,11 +97,11 @@
 	}
 
 	.poc-hero h1 {
-		font-size: clamp(2.65rem, 11vw, 4rem);
+		font-size: clamp(2.45rem, 9.5vw, 3.4rem);
 	}
 
 	.poc-profile {
-		width: min(100%, 280px);
+		width: min(100%, 260px);
 	}
 }
 
@@ -119,6 +119,6 @@
 	}
 
 	.poc-profile {
-		width: min(100%, 250px);
+		width: min(100%, 230px);
 	}
 }

@@ -29,11 +29,9 @@
 				<div class="practice-hero-shell">
 					<div class="practice-hero-copy">
 						<p class="section-kicker">Applied AI &amp; Revenue Operations</p>
-						<h1 id="practice-title">Building AI that revenue teams can <span>actually use.</span></h1>
+						<h1 id="practice-title">Building AI RevOps teams can trust and <span>put to work.</span></h1>
 						<p>
-							I build AI workflow systems for real operating decisions—grounded in trusted
-							context, designed around the people doing the work, and evaluated against a clear
-							evaluation..
+							I build AI workflows for Sales & Rev Ops that bring together trusted context from multiple sources, ground each answer in business rules, and evaluate outputs through a purpose-built harness—so teams can use them in real operating decisions.
 						</p>
 						<a class="text-link" href="#case-studies">View professional case studies <span aria-hidden="true">↓</span></a>
 					</div>
@@ -41,9 +39,9 @@
 					<aside class="answer-system" aria-label="How Trang uses AI in professional work">
 						<p class="answer-system-title">My operating principle</p>
 						<p class="operating-principle">
+							<span>Domain expertise defines what to solve, why it matters, and how the rules shape the outcome.</span>
 							<span>AI accelerates the build.</span>
-							<span>Domain expertise defines the why and the how.</span>
-							<span>Harness & Evaluation earns trust.</span>
+							<span>Harness & Validation earns trust.</span>
 						</p>
 					</aside>
 				</div>
@@ -53,13 +51,12 @@
 				<article id="workforce-restructuring" class="work-case-study" aria-labelledby="project-01-title">
 					<header class="case-study-header">
 						<p class="section-kicker">Project 01 · Ad-hoc decision support</p>
-						<h2 id="project-01-title">Modeling a workforce restructuring before quota decisions</h2>
+						<h2 id="project-01-title">Ad Hoc Modeling of Revenue, Quota and Compensation Impacts After a Workforce Restructuring</h2>
 						<p>
-							After a workforce reduction, the team had less capacity but the same payroll,
-							commission, and revenue-reporting deadlines. Leadership had less than 2 weeks to
+							After a 40% workforce reduction, the team had less capacity but the same revenue-reporting deadlines. Leadership had less than 2 weeks to
 							reset sales coverage and quotas, but first needed to understand the effects on
 							revenue attribution and variable compensation. The required context was split across
-							HR data, Salesforce, Snowflake and compensation plans; the incentive platform was not
+							HR data, Salesforce, Snowflake schemas, and compensation plans; the incentive platform was not
 							designed for this unusual one-time scenario.
 						</p>
 					</header>
@@ -71,53 +68,53 @@
 							<dl>
 								<div>
 									<dt>Scenario layer</dt>
-									<dd>I modeled the one-time change outside the compensation platform because configuring and regression-testing production plans would have taken weeks.</dd>
+									<dd>I modeled the one-time change outside the IC platform because building, configuring and UAT testing would have taken weeks.</dd>
 								</div>
 								<div>
 									<dt>Why RAG</dt>
-									<dd>The commission logic already existed in the codebase. Retrieval brought the relevant rules into Claude’s working context without fine-tuning or relying on model memory, while keeping the source logic inspectable.</dd>
+									<dd>RAG retrieved the company-specific compensation plan rules for the sales motion being analyzed. Claude may understand compensation concepts generally, but it doesn’t know the company’s exact plan design or how the rules vary across sales motions.</dd>
 								</div>
 								<div>
 									<dt>AI harness</dt>
-									<dd>I chose Claude as the development harness because the work required tracing existing code and reasoning across a large retrieved rule context. Workday, Salesforce, explicit compensation logic, and reconciliation—not the model—remained the calculation authority.</dd>
+									<dd>The harness verified that the employee’s job-profile metadata mapped to the expected compensation plan, checked that retrieved passages supported the rules being applied, and flagged duplicate records to prevent double counting. Conflicts across HR hierarchy data, Workday employment status, and Salesforce account ownership were routed to human review.</dd>
 								</div>
 							</dl>
 						</section>
 
 						<section class="case-study-part" aria-labelledby="domain-decisions-title">
 							<p class="part-label">02 · Domain expert decision</p>
-							<h3 id="domain-decisions-title">Translate a new organization into defensible business logic</h3>
+							<h3 id="domain-decisions-title">Decide what the new organization meant for credit, quota, and pay</h3>
 							<dl>
 								<div>
-									<dt>Revenue credit</dt>
-									<dd>I determined which reporting-line changes should alter attribution; not every hierarchy change affected credit.</dd>
+									<dt>Hierarchy meaning</dt>
+									<dd>A changed manager field did not automatically mean revenue should move. I distinguished administrative reporting changes from coverage changes that should alter account ownership, management rollups, or revenue credit.</dd>
 								</div>
 								<div>
-									<dt>Compensation</dt>
-									<dd>I separated seller-level rules from management compensation scenarios and applied the appropriate logic to each.</dd>
+									<dt>Rule application</dt>
+									<dd>I mapped each employee’s job profile and sales motion to the correct plan, then separated seller credit from management rollups so the model applied the appropriate quota and payout logic at each level.</dd>
 								</div>
 								<div>
-									<dt>Exceptions</dt>
-									<dd>I reviewed assumptions against source data and compensation rules, then resolved uncertain cases with the relevant partners.</dd>
+									<dt>Exception ownership</dt>
+									<dd>When employment status, reporting hierarchy, Salesforce ownership, and compensation rules disagreed, I determined which source governed the decision, documented the assumption, and resolved ambiguous cases with the relevant business owner.</dd>
 								</div>
 							</dl>
 						</section>
 
 						<section class="case-study-part case-study-part-impact" aria-labelledby="case-impact-title">
 							<p class="part-label">03 · Impact &amp; delivery</p>
-							<h3 id="case-impact-title">A decision-ready experience in three days</h3>
+							<h3 id="case-impact-title">Faster delivery, clearer decisions, broader access</h3>
 							<dl>
 								<div>
-									<dt>Delivery</dt>
-									<dd>The analysis and interactive tool were delivered in three days, with less than two weeks before quota decisions.</dd>
-								</div>
-								<div>
-									<dt>Format</dt>
-									<dd>Leaders could drill down by director and manager and compare team structure, revenue attribution, quota, and payout before and after the change.</dd>
+									<dt>AI-enabled productivity</dt>
+									<dd>Grounding AI in the relevant rules helped me apply domain expertise faster, compressing analysis and product delivery into two days while keeping judgment and validation with the domain expert.</dd>
 								</div>
 								<div>
 									<dt>Decision value</dt>
-									<dd>The interactive experience replaced an opaque worksheet and made tradeoffs visible before coverage and quota assignments were locked.</dd>
+									<dd>The interactive experience replaced an outdated worksheet and gave leaders a comprehensive before-and-after view of team structure, revenue credit, quota, and payout, with drill-downs by director and manager.</dd>
+								</div>
+								<div>
+									<dt>Secure visibility</dt>
+									<dd>Employee ID (EID)–based access controls extended relevant insights to the broader sales organization without distributing unrestricted workbooks, preserving confidence that sensitive employee and compensation data remained protected.</dd>
 								</div>
 							</dl>
 						</section>
