@@ -91,57 +91,57 @@
 					<div class="case-study-parts">
 						<section class="case-study-part" aria-labelledby="technical-decisions-title">
 							<p class="part-label">01 · Technical architecture decision</p>
-							<h3 id="technical-decisions-title">Build once for an urgent reorg; reuse for future what-if planning</h3>
+							<h3 id="technical-decisions-title">Design a grounded, reusable scenario architecture</h3>
 							<dl>
 								<div>
-									<dt>Evolution</dt>
-									<dd>Built for one urgent reorganization, the model evolved into a reusable Sales Ops framework for evaluating future changes to coverage, credit, quota, and compensation.</dd>
+									<dt>Architecture choice</dt>
+									<dd>Chose a modular scenario layer over reconfiguring the production incentive-compensation platform. This protected live payout processing while keeping the model separate from the system of record.</dd>
 								</div>
 								<div>
-									<dt>Reusable design</dt>
-									<dd>Standardized scenario inputs, business rules, and validation steps made the same framework repeatable across future reorganizations.</dd>
+									<dt>Grounding &amp; orchestration</dt>
+									<dd>Used a Claude workflow with RAG to retrieve company-specific compensation rules and MCP integrations to bring the required business context into the analysis.</dd>
 								</div>
 								<div>
-									<dt>Tradeoff</dt>
-									<dd>The external decision layer stayed fast and flexible, but every scenario still required refreshed source data and expert review.</dd>
+									<dt>Validation &amp; reuse</dt>
+									<dd>Applied job-to-plan mapping, source-evidence, duplicate-record, and cross-system consistency checks. Parameterized inputs and rules made the framework reusable for future reorganizations.</dd>
 								</div>
 							</dl>
 						</section>
 
 						<section class="case-study-part" aria-labelledby="domain-decisions-title">
 							<p class="part-label">02 · Sales Ops validation decision</p>
-							<h3 id="domain-decisions-title">Protect account handoffs and seller credit with governed validation</h3>
+							<h3 id="domain-decisions-title">Validate and resolve Sales Ops exceptions before decisions</h3>
 							<dl>
 								<div>
-									<dt>Operational risk</dt>
-									<dd>Sudden AE and manager departures left stale Salesforce ownership, missed handoffs, and unreliable credit logic.</dd>
+									<dt>Validation logic</dt>
+									<dd>Compared employment status, reporting hierarchy, account and opportunity ownership, deal stage, and credit logic to surface records disrupted by AE and manager departures.</dd>
 								</div>
 								<div>
-									<dt>Validation &amp; routing</dt>
-									<dd>The validation layer surfaced ownership, handoff, and crediting exceptions; classified them as people and hierarchy, account and opportunity ownership, or revenue credit and compensation; and routed each to the appropriate domain expert.</dd>
+									<dt>Exception classification</dt>
+									<dd>Classified each mismatch as people and hierarchy, account and opportunity ownership, or revenue credit and compensation.</dd>
 								</div>
 								<div>
-									<dt>Decision control</dt>
-									<dd>Unresolved exceptions stayed out of leadership-ready results until the accountable HR, Sales Ops, or Compensation and Finance partner confirmed the resolution—helping prevent missed handoffs and over- or under-crediting.</dd>
+									<dt>Review &amp; approval</dt>
+									<dd>Routed exceptions to the accountable HR, Sales Ops, or Compensation and Finance partner and held unresolved records out of leadership-ready results until the resolution was confirmed.</dd>
 								</div>
 							</dl>
 						</section>
 
 						<section class="case-study-part case-study-part-impact" aria-labelledby="case-impact-title">
 							<p class="part-label">03 · Sales &amp; RevOps impact</p>
-							<h3 id="case-impact-title">Turn a two-day response into a reusable planning capability</h3>
+							<h3 id="case-impact-title">Reduce planning cost, improve visibility, and prevent downstream errors</h3>
 							<dl>
 								<div>
-									<dt>Delivery speed</dt>
-									<dd>Delivered the initial scenario model and interactive experience in two days—versus weeks for production-platform reconfiguration—within leadership’s two-week planning window.</dd>
+									<dt>Time &amp; cost avoidance</dt>
+									<dd>Delivered the initial model in two days, avoiding weeks of production-platform configuration and UAT effort and the associated implementation cost. The reusable framework also reduced the effort required for future what-if analyses.</dd>
 								</div>
 								<div>
 									<dt>Decision visibility</dt>
 									<dd>Provided before-and-after views of sales capacity, account ownership, revenue credit, pipeline, quota, and payout exposure, with drill-downs by director and manager.</dd>
 								</div>
 								<div>
-									<dt>Ongoing value</dt>
-									<dd>What began as a one-time analysis became a reusable framework for future reorganizations and recurring leadership what-if questions.</dd>
+									<dt>Operational risk reduction</dt>
+									<dd>Surfaced stale ownership, missed handoffs, and crediting exceptions before they affected revenue reporting, quota and payout decisions, or seller compensation.</dd>
 								</div>
 							</dl>
 						</section>
