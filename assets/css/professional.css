@@ -159,11 +159,15 @@ nav a[aria-current="page"]::after {
 	line-height: 1.16;
 }
 
-.case-study-header > p:last-child {
+.case-study-header > p:last-of-type {
 	margin: 25px 0 0;
 	color: var(--muted);
 	font-size: clamp(1rem, 1.4vw, 1.12rem);
 	line-height: 1.75;
+}
+
+.case-study-tech {
+	margin: 24px 0 0;
 }
 
 .case-study-parts {
