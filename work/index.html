@@ -83,57 +83,57 @@
 					<div class="case-study-parts">
 						<section class="case-study-part" aria-labelledby="technical-decisions-title">
 							<p class="part-label">01 · Technical architecture decision</p>
-							<h3 id="technical-decisions-title">Build a temporary scenario layer—not a production IC rebuild</h3>
+							<h3 id="technical-decisions-title">Build once for an urgent reorg; reuse for future what-if planning</h3>
 							<dl>
 								<div>
-									<dt>Choice</dt>
-									<dd>I modeled the restructuring outside the incentive-compensation platform, joining HR hierarchy, Salesforce ownership, Snowflake data, and compensation-plan rules in a separate decision layer.</dd>
+									<dt>Evolution</dt>
+									<dd>Built for one urgent reorganization, the model evolved into a reusable Sales Ops framework for evaluating future changes to coverage, credit, quota, and compensation.</dd>
+								</div>
+								<div>
+									<dt>Reusable design</dt>
+									<dd>Standardized scenario inputs, business rules, and validation steps made the same framework repeatable across future reorganizations.</dd>
 								</div>
 								<div>
 									<dt>Tradeoff</dt>
-									<dd>This avoided weeks of configuration and UAT and enabled delivery in two days. In exchange, the solution was designed for one-time scenario planning rather than ongoing payout processing.</dd>
-								</div>
-								<div>
-									<dt>Controls</dt>
-									<dd>RAG supplied company-specific plan rules, while validation checks confirmed job-to-plan mappings, supporting rule evidence, and duplicate records. Conflicting HR, CRM, and ownership data was routed to human review.</dd>
+									<dd>The external decision layer stayed fast and flexible, but every scenario still required refreshed source data and expert review.</dd>
 								</div>
 							</dl>
 						</section>
 
 						<section class="case-study-part" aria-labelledby="domain-decisions-title">
-							<p class="part-label">02 · Sales Ops policy decision</p>
-							<h3 id="domain-decisions-title">Separate reporting-line changes from selling-ownership changes</h3>
+							<p class="part-label">02 · Sales Ops validation decision</p>
+							<h3 id="domain-decisions-title">Protect account handoffs and seller credit after sudden departures</h3>
 							<dl>
 								<div>
-									<dt>Decision</dt>
-									<dd>A manager change did not automatically move account ownership or seller credit. I used coverage and account ownership to determine seller credit, reporting hierarchy for management rollups, and job profile plus sales motion to assign compensation rules.</dd>
+									<dt>Operational risk</dt>
+									<dd>Sudden AE and manager departures left stale Salesforce ownership, missed handoffs, and unreliable credit logic.</dd>
 								</div>
 								<div>
-									<dt>Governance</dt>
-									<dd>When Workday status, reporting hierarchy, Salesforce ownership, and plan rules disagreed, I applied a documented source-of-truth hierarchy and routed unresolved cases to the appropriate business owner.</dd>
+									<dt>Validation layer</dt>
+									<dd>Built a validation layer to identify Salesforce ownership, handoff, and crediting exceptions created by sudden AE and manager departures, then route each issue for expert review.</dd>
 								</div>
 								<div>
-									<dt>Operational effect</dt>
-									<dd>This prevented administrative reorganizations from incorrectly shifting revenue credit and produced defensible quota, rollup, and payout calculations.</dd>
+									<dt>Business effect</dt>
+									<dd>Helped prevent accounts from missing a handoff and sellers or managers from being over- or under-credited.</dd>
 								</div>
 							</dl>
 						</section>
 
 						<section class="case-study-part case-study-part-impact" aria-labelledby="case-impact-title">
-							<p class="part-label">03 · Sales &amp; RevOps impact</p>
-							<h3 id="case-impact-title">Give leaders a decision-ready restructuring view in two days</h3>
+							<p class="part-label">03 · Exception governance</p>
+							<h3 id="case-impact-title">Turn data exceptions into an accountable resolution workflow</h3>
 							<dl>
 								<div>
-									<dt>Delivery speed</dt>
-									<dd>Delivered the scenario model and interactive experience in two days—versus weeks for production-platform reconfiguration—within leadership’s two-week planning window.</dd>
+									<dt>Workflow</dt>
+									<dd>Converted data discrepancies into a governed workflow: classify the exception, route it to the accountable business owner, document the decision, and update the model only after approval.</dd>
 								</div>
 								<div>
-									<dt>Planning visibility</dt>
-									<dd>Provided before-and-after views of sales capacity, account ownership, revenue credit, pipeline, quota, and payout exposure, with drill-downs by director and manager.</dd>
+									<dt>Resolution paths</dt>
+									<dd>Grouped discrepancies into people and hierarchy, account and opportunity ownership, and revenue credit or compensation.</dd>
 								</div>
 								<div>
-									<dt>Secure access</dt>
-									<dd>EID-based controls let sales leaders access relevant results without circulating unrestricted compensation workbooks or exposing organization-wide employee data.</dd>
+									<dt>Decision gate</dt>
+									<dd>Held unresolved exceptions out of leadership-ready results until the appropriate HR, Sales Ops, or Compensation and Finance partner confirmed and documented the resolution.</dd>
 								</div>
 							</dl>
 						</section>
